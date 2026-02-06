@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+/* Enhanced mobile support */
+@media (max-width: 600px) {
+    header {
+        height: 70px;
+    }
+    .vtuber-logo {
+        max-width: 70vw;
+        margin-top: -1.2rem;
+        margin-bottom: -0.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
+    .about, .talents {
+        max-width: 98vw;
+        padding: 1rem 0.5rem;
+    }
+    .members {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .member-card {
+        width: 98vw;
+        min-width: 0;
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 1rem 0.5rem 0.8rem 0.5rem;
+    }
+    .member-img {
+        height: 160px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .about h2, .talents h2 {
+        font-size: 1.1rem;
+    }
+    .member-name {
+        font-size: 1rem;
+    }
+    .member-desc {
+        font-size: 0.9rem;
+    }
+    .member-link {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+}
+/* About and Talent List sections */
+.about {
+    max-width: 700px;
+    margin: 2.5rem auto 2rem auto;
+    background: rgba(56, 163, 165, 0.50);
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 24px rgba(1,58,99,0.10);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: #a9d6e5;
+}
+
+.about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.7rem;
+    color: #fff;
+    text-shadow: 0 1px 8px #013a63;
+}
+
+.about p {
+    font-size: 1.1rem;
+    color: #e0f7fa;
+    margin-bottom: 0;
+}
+
+.talents {
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 0;
+    text-align: center;
+    background: transparent;
+    border-radius: 1.2rem;
+}
+
+.talents h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    color: #fff;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 1px 6px #013a63;
+}
+
+.talent-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.2rem auto 2rem auto;
+    max-width: 500px;
+    text-align: left;
+    color: #e0f7fa;
+    font-size: 1.08rem;
+    background: transparent;
+}
+.talent-list li {
+    margin-bottom: 1.1rem;
+    background: rgba(1,58,99,0.09);
+    border-radius: 0.7rem;
+    padding: 0.7rem 1rem;
+    box-shadow: 0 2px 8px rgba(56,163,165,0.08);
+}
+.talent-list strong {
+    color: #fff;
+    font-size: 1.13rem;
+}
+/* Animated underwater bubbles background */
+.bubble-bg {
+    position: fixed;
+    left: 0; top: 0; width: 100vw; height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    background: rgba(169, 214, 229, 0.22);
+    box-shadow: 0 0 16px 4px rgba(56,163,165,0.12);
+    animation: bubbleUp 12s linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes bubbleUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, rgb(169, 214, 229) 0%, #1e6091 40%, #38a3a5 80%, #a9d6e5 100%);
+        transition: background 0.5s;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    .about, .talents {
+        max-width: 98vw;
+        padding: 1rem 0.5rem;
+    }
+    .members {
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+    }
+    .member-card {
+        width: 98vw;
+        min-width: 0;
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 1rem 0.5rem 0.8rem 0.5rem;
+    }
+    .member-img {
+        height: 160px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .about h2, .talents h2 {
+        font-size: 1.2rem;
+    }
+    .member-name {
+        font-size: 1rem;
+    }
+    .member-desc {
+        font-size: 0.9rem;
+    }
+    .member-link {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+}
+
+
+    .vtuber-logo {
+        display: block;
+        margin: 0 auto 0.7rem auto;
+        max-width: 420px;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 2px 12px #013a63cc);
+        margin-top: -2.5rem;
+        margin-bottom: -1.2rem;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+
+    /* SFX toggle button */
+    .sfx-toggle {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        background: rgba(255,255,255,0.06);
+        color: #fff;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.18s, transform 0.12s;
+        z-index: 12;
+    }
+    .sfx-toggle:active { transform: scale(0.96); }
+    .sfx-toggle[aria-pressed="false"] { opacity: 0.55; }
+
+    header {
+        text-align: center;
+        height: 90px;
+        padding: 0;
+        overflow: visible;
+        position: relative;
+        background: rgba(30, 96, 145, 0.8);
+        box-shadow: 0 4px 16px rgba(1,58,99,0.18);
+        position: relative;
+        z-index: 2;
+    }
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 8px #1c92d2;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #aeefff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-top: 2.2rem;
+}
+
+.members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.member-card {
+    background: rgba(1, 58, 99, 0.5);
+    border-radius: 1.2rem;
+    box-shadow: 0 8px 32px rgba(56,163,165,0.18);
+    width: 220px;
+    min-height: 400px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+@keyframes floatUp {
+    0% { opacity: 0; transform: translateY(40px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.member-card:hover {
+    transform: scale(1.04) translateY(-8px);
+    box-shadow: 0 16px 48px rgba(28,146,210,0.35);
+}
+
+/* Reveal animation applied when card enters viewport */
+.member-card.reveal {
+    /* wave / highlight effect when entering viewport */
+    transform: translateY(-6px);
+    box-shadow: 0 18px 60px rgba(24,110,140,0.24);
+    transition: transform 0.45s cubic-bezier(.22,.9,.28,1), box-shadow 0.45s;
+}
+
+/* subtle shine that travels across the card once on reveal */
+.member-card.reveal::after {
+    content: '';
+    position: absolute;
+    left: -60%;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.06) 100%);
+    transform: skewX(-18deg);
+    opacity: 0;
+    pointer-events: none;
+    animation: shineMove 0.9s var(--delay, 0s) forwards;
+}
+
+@keyframes shineMove {
+    0% { left: -60%; opacity: 0; }
+    20% { opacity: 0.9; }
+    100% { left: 120%; opacity: 0; }
+}
+
+.member-img {
+    width: 100%;
+    height: 280px;
+    border-radius: 0;
+    object-fit: cover;
+    border: none;
+    box-shadow: 0 4px 16px #1c92d2;
+    margin-bottom: 0.7rem;
+    background: #fff;
+    display: block;
+}
+
+.member-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background: rgba(56, 163, 165, 0.7);
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.member-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #012; /* default dark text on light tag */
+    background: rgba(255,255,255,0.85);
+    padding: 0.28rem 0.6rem;
+    border-radius: 0.4rem;
+    text-align: center;
+    margin-bottom: 0.6rem;
+    align-self: center;
+    width: fit-content;
+}
+.member-tag-nsfw { background: rgba(200,40,60,0.95); color: #fff; }
+.member-tag-semi-nsfw { background: rgba(235,153,0,0.95); color: #08111a; }
+.member-tag-sfw { background: rgba(56,163,165,0.95); color: #fff; }
+.member-tag-unrated { background: rgba(255,255,255,0.6); color: #012; }
+
+.member-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 4px #1c92d2;
+        color: #a9d6e5;
+        margin-bottom: 0.3rem;
+    text-align: center;
+}
+
+.member-desc {
+    font-size: 0.95rem;
+    color: #e0f7fa;
+    margin-bottom: 1rem;
+    min-height: 80px;
+    text-align: center;
+}
+
+.member-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: stretch;
+    width: 100%;
+    margin-top: auto;
+}
+
+.member-link {
+    background: #38a3a5;
+    color: #fff;
+    padding: 0.5rem 0;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px #1e6091;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.member-link:hover {
+    background: #a9d6e5;
+    color: #013a63;
+    box-shadow: 0 4px 16px #a9d6e5;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(30, 96, 145, 0.7);
+    font-size: 1rem;
+    color: #a9d6e5;
+    position: relative;
+    z-index: 2;
+}
+
+.credits-link {
+    color: #e0f7fa;
+    text-decoration: underline;
+    margin-left: 0.6rem;
+}
+
+/* Age modal styles */
+.age-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2,12,22,0.6);
+    z-index: 99998;
+}
+.age-modal-inner {
+    background: linear-gradient(180deg, rgba(6,38,63,0.98), rgba(3,65,95,0.98));
+    border-radius: 14px;
+    padding: 1.6rem 1.4rem;
+    width: min(680px, 92vw);
+    box-shadow: 0 12px 36px rgba(1,20,32,0.6);
+    color: #e8fbff;
+    text-align: center;
+}
+.age-modal h3 { font-family: 'Montserrat', sans-serif; margin: 0 0 0.6rem 0; font-size: 1.25rem; color: #fff; }
+.age-modal-text { color: #cfeff6; margin-bottom: 1rem; font-weight: 700; }
+.age-modal-actions { display: flex; justify-content: center; gap: 0.6rem; }
+.age-accept { background: #17a2d6; color: #fff; border: none; padding: 0.6rem 0.9rem; border-radius: 8px; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.28); }
+.age-accept:active { transform: translateY(1px); }
+
+/* Decorative bubbles */
+body::before {
+    content: '';
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background: url('https://svgshare.com/i/13uA.svg') repeat;
+    opacity: 0.12;
+           box-shadow: 0 4px 16px #38a3a5;
+           background: #a9d6e5;
+}
+
+@keyframes bubbles {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}

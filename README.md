@@ -1,2 +1,3 @@
-# official-site
-no minors and antis allowed pls
+# REQUIN-VT
+
+A VTuber group made by pettan friends
